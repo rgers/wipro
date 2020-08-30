@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     private let restWorker: RestWorker
     private let imageWorker: ImageWorker
     private let favsWorker: FavouritesWorker
-    private var cities: [City] = [City]()
+    private var cities = [City]()
+    private var favCities = [City]()
     private var citiesRequest: AnyObject?
-    private var favouritesFilter = true
+    private var favouritesFilter = false
+    private let filterButton = UIButton()
     
     init(restWorker: RestWorker, imageWorker: ImageWorker, favsWorker: FavouritesWorker) {
         self.restWorker = restWorker
@@ -31,8 +33,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filter))
         // Do any additional setup after loading the view.
         setup()
+    }
+    
+    @objc
+    func filter() {
+        self.favouritesFilter = !self.favouritesFilter
+        if(self.favouritesFilter) {
+            doFilter()
+        }
+        citiesTable.reloadData()
+    }
+    
+    func doFilter() {
+        favCities.removeAll()
+        for city in cities {
+            if(city.favourite) {
+                favCities.append(city)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,12 +104,16 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.count
+        if favouritesFilter {
+            return favCities.count
+        } else {
+            return cities.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "City", for: indexPath) as? CityCell else { return UITableViewCell() }
-        let city = cities[indexPath.row]
+        let city = favouritesFilter ? favCities[indexPath.row] : cities[indexPath.row]
         cell.viewModel = city
         return cell
     }

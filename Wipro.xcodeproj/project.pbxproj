@@ -12,7 +12,7 @@
 		53486CA424F6B41900B58695 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486CA324F6B41900B58695 /* ViewController.swift */; };
 		53486CAC24F6B41C00B58695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53486CAB24F6B41C00B58695 /* Assets.xcassets */; };
 		53486CAF24F6B41C00B58695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53486CAD24F6B41C00B58695 /* LaunchScreen.storyboard */; };
-		53486CBA24F6B41C00B58695 /* WiproTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486CB924F6B41C00B58695 /* WiproTests.swift */; };
+		53486CBA24F6B41C00B58695 /* WiproFavouritesWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486CB924F6B41C00B58695 /* WiproFavouritesWorkerTests.swift */; };
 		53486CC524F6B41C00B58695 /* WiproUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486CC424F6B41C00B58695 /* WiproUITests.swift */; };
 		53486CD324F6BD8E00B58695 /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486CD224F6BD8E00B58695 /* Contracts.swift */; };
 		53486CDE24F6C32300B58695 /* ApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486CDD24F6C32300B58695 /* ApiResource.swift */; };
@@ -69,7 +69,7 @@
 		53486CAE24F6B41C00B58695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53486CB024F6B41C00B58695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53486CB524F6B41C00B58695 /* WiproTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53486CB924F6B41C00B58695 /* WiproTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproTests.swift; sourceTree = "<group>"; };
+		53486CB924F6B41C00B58695 /* WiproFavouritesWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproFavouritesWorkerTests.swift; sourceTree = "<group>"; };
 		53486CBB24F6B41C00B58695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53486CC024F6B41C00B58695 /* WiproUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53486CC424F6B41C00B58695 /* WiproUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproUITests.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		53486CB824F6B41C00B58695 /* WiproTests */ = {
 			isa = PBXGroup;
 			children = (
-				53486CB924F6B41C00B58695 /* WiproTests.swift */,
+				53486CB924F6B41C00B58695 /* WiproFavouritesWorkerTests.swift */,
 				53486CBB24F6B41C00B58695 /* Info.plist */,
 			);
 			path = WiproTests;
@@ -429,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53486CBA24F6B41C00B58695 /* WiproTests.swift in Sources */,
+				53486CBA24F6B41C00B58695 /* WiproFavouritesWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,11 @@ class FavouritesWorker {
         return favs.contains(id)
     }
     
+    func getCount() -> Int {
+        guard let favs = defaults.array(forKey: key) as? [Int] else { return 0 }
+        return favs.count
+    }
+    
     func addFav(id: Int) {
         guard var favs = defaults.array(forKey: key) as? [Int] else { return }
         if !favs.contains(id) {
